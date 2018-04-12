@@ -1,0 +1,1 @@
+# opera-addon-private-window
