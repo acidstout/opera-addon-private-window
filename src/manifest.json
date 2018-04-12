@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+	"name": "Long-click for private window",
+	"description": "Open links as private windows by clicking and holding links",
+   "background": {
+      "scripts": ["js/background.js"]
+   },
+	"icons": {
+		"16": "img/icon16.png",
+		"32": "img/icon32.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+   "content_scripts": [{
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": [ "js/contentscript.js" ],
+      "matches": [
+         "<all_urls>"
+      ]
+   }],
+    "options_ui": {
+        "open_in_tab": true,
+        "page": "options.html"
+    },
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+    "minimum_chrome_version": "22",
+	"permissions": [
+  		"tabs"
+	],
+	"version": "1.1"
+}

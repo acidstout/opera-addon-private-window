@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Options</title>
+		<link href="css/options.css" rel="stylesheet">
+		<script src="js/options.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title">
+				<img src="img/icon48.png" alt=""/>
+				<div>Long-press mouse<br/>buttons options</div>
+			</div>
+			
+			<br class="clear"/>
+			<br/>
+			<label for="dragactionleft">Left mouse button</label>
+			<select id="dragactionleft">
+				<option value="none">(none)</option>
+				<option value="bg" selected="">New background tab</option>
+				<option value="new">Private window</option>
+				<option value="crnt">Current tab</option>
+			</select>
+			<br/>
+			<br/>
+			<label for="dragactionright">Right mouse button</label>
+			<select id="dragactionright">
+				<option value="none" selected>(none)</option>
+				<option value="bg">New background tab</option>
+				<option value="new">Private window</option>
+				<option value="crnt">Current tab</option>
+			</select>
+			<br/>
+			<br/>
+			<label for="detectval">Long-press duration</label> <span id="detectvallbl">350</span> ms<br/>
+			<input type="range" min="100" max="3000" value="350" id="detectval" step="10">
+		</div>
+	</body>
+</html>
